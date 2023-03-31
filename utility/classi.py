@@ -25,14 +25,18 @@ class Sfera:
         return superficie
 
 class Triangolo:
-    def __init__(self, a,b,c):
+    def __init__(self, a:float,b:float,c:float):
         self.cateto1 = a
         self.cateto2 = b 
         self.cateto3 = c
     def perimetro(self):    
         '''calcola il perimetro del triangolo'''
-        perimetro = self.cateto1+self.cateto2+self.cateto3
-        return perimetro
+        if self.cateto1<(self.cateto2+self.cateto3) and self.cateto2<(self.cateto1+self.cateto3) and self.cateto3<(self.cateto1+self.cateto2):
+            perimetro = self.cateto1+self.cateto2+self.cateto3
+            print("il perimetro del triangolo è "+str(perimetro))
+            return perimetro
+        else:
+            print("i segmenti inseriti non formano un triangolo")
     def area(self):
         '''calcola area del triangolo'''
         if self.cateto1<(self.cateto2+self.cateto3) and self.cateto2<(self.cateto1+self.cateto3) and self.cateto3<(self.cateto1+self.cateto2):
@@ -42,5 +46,4 @@ class Triangolo:
             return area
         else:
             print("i segmenti inseriti non formano un triangolo")
-
         
