@@ -12,12 +12,14 @@ class Cubo:
         return superficie
     
 
-class sfera:
+class Sfera:
     def __init__(self, r:float):
         self.raggio = r
     def volume(self):
+        '''calcola il volume di una sfera'''
         volume = 4/3*(math.pi*(self.raggio**3))
         return volume
     def superfice(self):
+        '''calcola la superficie di una sfera'''
         superficie = 4*math.pi*(self.raggio**2)
         return superficie
