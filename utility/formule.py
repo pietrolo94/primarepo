@@ -60,3 +60,7 @@ def volume_sfera(r):
     print("il volume della sfera è "+str(volume)+ " la superfice della sfera è "+str(superficie))
     return volume , superficie
 
+class Persona:
+    def __init__(self,a,b):
+        self.nome = a
+        self.eta = b
